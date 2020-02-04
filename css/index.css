@@ -1,0 +1,41 @@
+.goShopping{
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    border-radius: 50%;
+    z-index: 999;
+}
+.down{
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    z-index: 999;
+}
+.page1{
+    background: url('../images/01-bg.png') no-repeat center bottom;
+}
+.page1 .content{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    height: 600px;
+    background: rgba(0, 0, 0, 0.2);
+}
+.page1 .goods{
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.page1 .sofa{
+    position: absolute;
+    top: 180px;
+    left: 250px;
+}
+.page1 .fly{
+    position: absolute;
+    top: 20px;
+    right: -50px;
+}
