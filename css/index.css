@@ -10,6 +10,15 @@
     bottom: 100px;
     right: 100px;
     z-index: 999;
+    animation: move1 0.8s linear infinite alternate;
+}
+@keyframes move1{
+    from{
+        bottom: 100px;
+    }
+    to{
+        bottom: 130px;
+    }
 }
 .page1{
     background: url('../images/01-bg.png') no-repeat center bottom;
@@ -33,9 +42,39 @@
     position: absolute;
     top: 180px;
     left: 250px;
+    animation: move2 0.8s linear infinite alternate;
+}
+@keyframes move2{
+    from{
+        top: 180px;
+    }
+    to{
+        top: 210px;
+    }
 }
 .page1 .fly{
     position: absolute;
     top: 20px;
     right: -50px;
+    animation: move3 0.8s linear infinite alternate;
+}
+@keyframes move3{
+    from{
+        top: 20px;
+    }
+    to{
+        top: 80px;
+    }
+}
+/* 第二屏 */
+.section.active .test{
+    animation: move4 1s linear 1s infinite alternate;
+}
+@keyframes move4{
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(200px);
+    }
 }
