@@ -23,7 +23,7 @@
 .page1{
     background: url('../images/01-bg.png') no-repeat center bottom;
 }
-.page1 .content{
+.content{
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -67,14 +67,97 @@
     }
 }
 /* 第二屏 */
-.section.active .test{
-    animation: move4 1s linear 1s infinite alternate;
+.page2{
+    background: url('../images/02-bg.png') no-repeat center bottom;
 }
+.page2 .text div{
+    display: inline-block;
+}
+.page2 .text{
+    text-align: center;
+}
+.page2 .text .text2{
+    position: absolute;
+    opacity: 0;
+}
+.page2 .goods{
+    position: absolute;
+    top: 170px;
+    left: 220px;
+    transform: scale(0);
+    transform-origin: bottom right;
+}
+.page2 .sofa{
+    position: absolute;
+    top: 133px;
+    left: 280px;
+    transform: scale(0.5);
+}
+.page2 .input{
+    position: absolute;
+    top: 245px;
+    right: -600px;
+}
+.page2 .input .sofaText{
+    position: absolute;
+    top: 3px;
+    left: 95px;
+    opacity: 0;
+}
+/* 第二屏动画 */
+.page2.lzz .text .text1{
+    position: absolute;
+    opacity: 0;
+    transition: all 3s;
+}
+.page2.lzz .text .text2{
+    position: static;
+    opacity: 1;
+    transition: all 10s;
+}
+.page2 .sofa{
+    opacity: 0;
+}
+.page2.lzz .input{
+    animation: move4 3s ease 1s forwards;
+}
+.page2.lzz .input .sofaText{
+    opacity: 1;
+    transition: all 1s linear 2s;
+}
+.page2.lzz .goods{
+    transform: scale(1);
+    transition: all 1s linear 3s;
+}
+/* .page2.lzz .sofa{
+    animation: move6 0.1s linear 5s forwards;
+} */
 @keyframes move4{
+    0%{
+        top: 245px;
+        right:-600px;
+    }
+    33.3%{
+        top: 245px;
+        right: 320px;
+        transform: scale(1);
+    }
+    66.6%{
+        top: 245px;
+        right: 320px;
+        transform: scale(1);
+    }
+    100%{
+        top: 112px;
+        right: 122px;
+        transform: scale(0.5);
+    }
+}
+/* @keyframes move6{
     from{
-        transform: translateY(0px);
+        opacity: 0;
     }
     to{
-        transform: translateY(200px);
+        opacity: 1;
     }
-}
+} */

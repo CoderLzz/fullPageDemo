@@ -4,7 +4,8 @@ $(function () {
         verticalCentered:false,
         navigation:true,
         afterLoad:function(link,index){
-            $('.section').eq(index.index).addClass('active')
+            console.log(index);
+            $('.section').eq(index.index).addClass('lzz')
         }
     });
 });
