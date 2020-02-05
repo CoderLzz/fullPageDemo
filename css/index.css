@@ -92,6 +92,8 @@
     top: 133px;
     left: 280px;
     transform: scale(0.5);
+    opacity: 0;
+    z-index: 9999999;
 }
 .page2 .input{
     position: absolute;
@@ -115,9 +117,6 @@
     opacity: 1;
     transition: all 10s;
 }
-.page2 .sofa{
-    opacity: 0;
-}
 .page2.lzz .input{
     animation: move4 3s ease 1s forwards;
 }
@@ -129,9 +128,6 @@
     transform: scale(1);
     transition: all 1s linear 3s;
 }
-/* .page2.lzz .sofa{
-    animation: move6 0.1s linear 5s forwards;
-} */
 @keyframes move4{
     0%{
         top: 245px;
@@ -153,11 +149,62 @@
         transform: scale(0.5);
     }
 }
-/* @keyframes move6{
+.page2.oym .sofa{
+    animation: move5 1s linear;
+}
+@keyframes move5{
     from{
-        opacity: 0;
+        opacity: 1;
     }
     to{
         opacity: 1;
+        transform: translate(-70px,800px);
     }
-} */
+}
+/* 第三屏动画 */
+.page3{
+    background: url('../images/03-bg.png') no-repeat center bottom;
+}
+.page3 .sofa{
+    position: absolute;
+    top: 174px;
+    left: 210px;
+    opacity: 0;
+}
+.page3 .selection img:first-child{
+    position: absolute;
+}
+.page3 .selection img:last-child{
+    position: absolute;
+    opacity: 0;
+}
+.page3 .car img:first-child{
+    position: absolute;
+}
+.page3 .car img:last-child{
+    position: absolute;
+    opacity: 0;
+}
+.page3 .selection{
+    position: absolute;
+    top: 285px;
+    left: 488px;
+}
+.page3 .car{
+    position: absolute;
+    top: 432px;
+    left: 488px;
+}
+.page3.lzz .sofa{
+    opacity: 1;
+}
+.page3.lzz .selection img:last-child{
+    opacity: 1;
+    transition: all 1s linear;
+}
+.page3.lzz .car img:last-child{
+    opacity: 1;
+    transition: all 1s linear;
+}
+/* 第四屏开始 */
+
