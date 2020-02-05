@@ -170,6 +170,7 @@
     top: 174px;
     left: 210px;
     opacity: 0;
+    z-index: 999;
 }
 .page3 .selection img:first-child{
     position: absolute;
@@ -206,5 +207,117 @@
     opacity: 1;
     transition: all 1s linear;
 }
+.page3.oym .sofa{
+    animation: move7 1s linear;
+}
+@keyframes move7{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 1;
+        transform: translate(200px,750px) rotate(45deg);
+    }
+}
 /* 第四屏开始 */
-
+.page4{
+    background: url('../images/04-bg.png') no-repeat center bottom;
+}
+.page4 .cloud img{
+    transform: translateX(-400px);
+    animation: move6 10s linear infinite alternate;
+}
+@keyframes move6 {
+    from{
+        transform: translateX(-400px);
+    }
+    to{
+        transform: translateX(500px);
+    }
+}
+.page4 .title img:first-child{
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.page4 .title img:last-child{
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+.page4 .sofa{
+    position: absolute;
+    top: 221px;
+    left: 408px;
+    transform: rotate(45deg);
+    opacity: 0;
+}
+.page4 .car{
+    position: relative;
+    margin-top: 100px;
+    text-align: center;
+}
+.page4 .address{
+    position: absolute;
+    top: 210px;
+    left: 50%;
+    width: 283px;
+    height: 270px;
+    transform: translateX(-50%);
+}
+.page4 .address img:first-child{
+    position: absolute;
+    opacity: 0;
+}
+.page4 .address img:last-child{
+    position: absolute;
+    top: 58px;
+    left: 56px;
+    opacity: 0;
+}
+.page4.lzz .car{
+    animation: move8 2s linear forwards;
+}
+.page4.lzz .sofa{
+    animation: move9 2s linear forwards;
+    opacity: 1;
+}
+@keyframes move8{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 1;
+        transform: translateX(1000px);
+    }
+}
+@keyframes move9{
+    0%{
+        transform: rotate(45deg);
+    }
+    50%{
+        transform: translateX(500px);
+    }
+    100%{
+        transform: translateX(1000px) rotate(0deg);
+    }
+}
+.page4.lzz .title img:first-child{
+    opacity: 0;
+    transition: all 0.1s linear 2s;
+} 
+.page4.lzz .title img:last-child{
+    opacity: 1;
+    transition: all 1s linear 2s;
+}
+.page4.lzz .address img:first-child{
+    opacity: 1;
+    transition: all 1s linear 2s;
+}
+.page4.lzz .address img:last-child{
+    opacity: 1;
+    transition: all 1s linear 3s;
+}

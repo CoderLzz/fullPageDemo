@@ -16,6 +16,9 @@ $(function () {
             if(index.index==1&&nextIndex.index==2){
                 $('.section').eq(index.index).addClass('oym')
                 $('.section').eq(nextIndex.index).css({zIndex:-1})
+            }else if(index.index==2&&nextIndex.index==3){
+                $('.section').eq(index.index).addClass('oym')
+                $('.section').eq(nextIndex.index).css({zIndex:-2})
             }
         }
     }); 
