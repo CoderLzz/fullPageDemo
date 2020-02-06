@@ -323,7 +323,6 @@
 }
 /* 第五屏开始 */
 .page5{
-    overflow: hidden;
     background: url('../images/05-bg.png') no-repeat center bottom;
 }
 .page5 .card{
@@ -345,18 +344,21 @@
     position: absolute;
     top: -450px;
     right: 50px;
+    z-index: -999;
 }
 .page5 .mouse img:last-child{
     position: absolute;
     top: -450px;
     right: 50px;
     opacity: 0;
+    z-index: -999;
 }
 .page5 .sofa{
     position: absolute;
-    top: -350px;
+    top: 300px;
     left: 100px;
     transform: rotate(30deg);
+    opacity: 0;
 }
 .page5.lzz .hand{
     top: 230px;
@@ -367,11 +369,89 @@
     transition: all 0.5s linear 1s;
 }
 .page5.lzz .sofa{
-    top: 300px;
-    transition: all 1s ease 1.5s;
+    opacity: 1;
+    top: -350px;
+    animation: move12 1s linear 1.5s forwards;
+}
+@keyframes move12{
+    from{
+        opacity: 1;
+        top: -350px;
+    }
+    to{
+        opacity: 1;
+        top: 300px;
+    }
 }
 .page5.lzz .order{
     top: 70px;
     transition: all 1s linear 2s;
+}
+.page5.oym .sofa{
+    top: 300px;
+    animation: move11 linear 1.8s;
+}
+@keyframes move11{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 1;
+        transform: translate(50px,530px) scale(0.1);
+    }
+}
+/* 第六屏 */
+.page6{
+    background: url('../images/06-bg.png') no-repeat left bottom;
+}
+.page6 .car{
+    position: absolute;
+    bottom: 0;
+    left: 190px;
+}
+.page6 .box{
+    position: absolute;
+    top: 150px;
+    left: -500px;
+}
+.page6 .worker{
+    position: absolute;
+    bottom: 110px;
+    left: 165px;
+    transform: scale(0);
+    transform-origin: center bottom;
+}
+.page6.lzz .box{
+    left: 200px;
+    transition: all 0.8s ease;
+    animation: move13 1s ease 1s forwards;
+}
+.page6.lzz{
+    background-position: -950px bottom;
+    transition: all 2s linear 2s;
+}
+.page6.lzz .worker{
+    transform: scale(1);
+    transition: all 1s linear 4s;
+    animation: move14 1s linear 5s forwards;
+}
+@keyframes move13{
+    0%{
+        
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(300px) scale(0.1);
+    }
+}
+@keyframes move14{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 1;
+        transform: translateX(150px);
+    }
 }
 

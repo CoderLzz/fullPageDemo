@@ -22,6 +22,9 @@ $(function () {
             }else if(index.index==3&&nextIndex.index==4){
                 $('.section').eq(index.index).addClass('oym')
                 $('.section').eq(nextIndex.index).css({zIndex:-3})
+            }else if(index.index==4&&nextIndex.index==5){
+                $('.section').eq(index.index).addClass('oym')
+                $('.section').eq(nextIndex.index).css({zIndex:-4})
             }
         }
     }); 
