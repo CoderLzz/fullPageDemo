@@ -118,15 +118,15 @@
     transition: all 10s;
 }
 .page2.lzz .input{
-    animation: move4 3s ease 1s forwards;
+    animation: move4 3s ease forwards;
 }
 .page2.lzz .input .sofaText{
     opacity: 1;
-    transition: all 1s linear 2s;
+    transition: all 1s linear 1s;
 }
 .page2.lzz .goods{
     transform: scale(1);
-    transition: all 1s linear 3s;
+    transition: all 1s linear 2s;
 }
 @keyframes move4{
     0%{
@@ -321,3 +321,57 @@
     opacity: 1;
     transition: all 1s linear 3s;
 }
+/* 第五屏开始 */
+.page5{
+    overflow: hidden;
+    background: url('../images/05-bg.png') no-repeat center bottom;
+}
+.page5 .card{
+    position: absolute;
+    top: 150px;
+    left: 0;
+}
+.page5 .hand{
+    position: absolute;
+    top: 605px;
+    right: 100px;
+}
+.page5 .order{
+    position: absolute;
+    top: 150px;
+    left: 150px;
+}
+.page5 .mouse img:first-child{
+    position: absolute;
+    top: -450px;
+    right: 50px;
+}
+.page5 .mouse img:last-child{
+    position: absolute;
+    top: -450px;
+    right: 50px;
+    opacity: 0;
+}
+.page5 .sofa{
+    position: absolute;
+    top: -350px;
+    left: 100px;
+    transform: rotate(30deg);
+}
+.page5.lzz .hand{
+    top: 230px;
+    transition: all 1s ease;
+}
+.page5.lzz .mouse img:last-child{
+    opacity: 1;
+    transition: all 0.5s linear 1s;
+}
+.page5.lzz .sofa{
+    top: 300px;
+    transition: all 1s ease 1.5s;
+}
+.page5.lzz .order{
+    top: 70px;
+    transition: all 1s linear 2s;
+}
+
