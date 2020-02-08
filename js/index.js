@@ -15,17 +15,18 @@ $(function () {
         onLeave:function(index,nextIndex){
             if(index.index==1&&nextIndex.index==2){
                 $('.section').eq(index.index).addClass('oym')
-                $('.section').eq(nextIndex.index).css({zIndex:-1})
             }else if(index.index==2&&nextIndex.index==3){
                 $('.section').eq(index.index).addClass('oym')
-                $('.section').eq(nextIndex.index).css({zIndex:-2})
             }else if(index.index==3&&nextIndex.index==4){
                 $('.section').eq(index.index).addClass('oym')
-                $('.section').eq(nextIndex.index).css({zIndex:-3})
             }else if(index.index==4&&nextIndex.index==5){
                 $('.section').eq(index.index).addClass('oym')
-                $('.section').eq(nextIndex.index).css({zIndex:-4})
             }
         }
     }); 
+    var hand=document.querySelector('.page8 .hand')
+    document.onmousemove=function(e){
+        hand.style.top=e.clientY+'px'
+        hand.style.left=e.clientX-50+'px'
+    }
 });
