@@ -27,10 +27,9 @@
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
     width: 900px;
     height: 600px;
-    background: rgba(0, 0, 0, 0.2);
+    margin-left: -450px;
 }
 .page1 .goods{
     position: absolute;
@@ -164,13 +163,13 @@
 /* 第三屏动画 */
 .page3{
     background: url('../images/03-bg.png') no-repeat center bottom;
+    z-index: 999;
 }
 .page3 .sofa{
     position: absolute;
     top: 174px;
     left: 210px;
     opacity: 0;
-    z-index: 999;
 }
 .page3 .selection img:first-child{
     position: absolute;
@@ -222,6 +221,7 @@
 /* 第四屏开始 */
 .page4{
     background: url('../images/04-bg.png') no-repeat center bottom;
+    z-index: 99;
 }
 .page4 .cloud img{
     transform: translateX(-400px);
@@ -324,6 +324,7 @@
 /* 第五屏开始 */
 .page5{
     background: url('../images/05-bg.png') no-repeat center bottom;
+    z-index: 50;
 }
 .page5 .card{
     position: absolute;
@@ -333,7 +334,9 @@
 .page5 .hand{
     position: absolute;
     top: 605px;
+    /* top: 203px; */
     right: 100px;
+    opacity: 0;
 }
 .page5 .order{
     position: absolute;
@@ -344,14 +347,12 @@
     position: absolute;
     top: -450px;
     right: 50px;
-    z-index: -999;
 }
 .page5 .mouse img:last-child{
     position: absolute;
     top: -450px;
     right: 50px;
     opacity: 0;
-    z-index: -999;
 }
 .page5 .sofa{
     position: absolute;
@@ -361,6 +362,7 @@
     opacity: 0;
 }
 .page5.lzz .hand{
+    opacity: 1;
     top: 230px;
     transition: all 1s ease;
 }
@@ -403,6 +405,7 @@
 /* 第六屏 */
 .page6{
     background: url('../images/06-bg.png') no-repeat left bottom;
+    z-index: 49;
 }
 .page6 .car{
     position: absolute;
@@ -433,6 +436,38 @@
     right: 0;
     transform: scale(0);
     transform-origin: center bottom;
+}
+.page6 .cloud img:first-child{
+    position: absolute;
+    top: -130px;
+    left: 0;
+}
+.page6 .cloud img:last-child{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.page6.lzz .cloud img:first-child{
+    animation: cloud1 6s linear infinite alternate;
+}
+.page6.lzz .cloud img:last-child{
+    animation: cloud2 6s linear infinite alternate;
+}
+@keyframes cloud1{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(500px);
+    }
+}
+@keyframes cloud2{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-200px);
+    }
 }
 .page6 .say{
     position: absolute;
@@ -573,4 +608,24 @@
     100%{
         transform: scale(0.8);
     }
+}
+/* 第八屏开始 */
+.page8{
+    background: url('../images/08-bg.png');
+}
+.page8 .btn{
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.page8 .again{
+    position: absolute;
+    top: 270px;
+    right: 330px;
+}
+.page8 .hand{
+    position: absolute;
+    top: 0;
+    left: 0;
 }
